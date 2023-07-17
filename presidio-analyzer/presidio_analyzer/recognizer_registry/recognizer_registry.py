@@ -41,7 +41,7 @@ from presidio_analyzer.predefined_recognizers import (
     ItPassportRecognizer,
     ItIdentityCardRecognizer,
     InPanRecognizer,
-    InAadharrecognizer,
+    InAadharRecognizer,
     InVoterIdRecognizer,
     InUpiRecognizer
 )
@@ -92,7 +92,7 @@ class RecognizerRegistry:
                 AuTfnRecognizer,
                 AuMedicareRecognizer,
                 InPanRecognizer,
-                InAadharrecognizer,
+                InAadharRecognizer,
                 InVoterIdRecognizer,
                 InUpiRecognizer,
             ],
