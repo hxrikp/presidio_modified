@@ -1,5 +1,6 @@
 """Replaces the PII text entity with new string."""
 from typing import Dict
+import uuid
 
 from presidio_anonymizer.operators import Operator, OperatorType
 from presidio_anonymizer.services.validators import validate_type
@@ -14,7 +15,7 @@ class Replace(Operator):
         """:return: new_value."""
         new_val = params.get(self.NEW_VALUE)
         if not new_val:
-            return f"<{params.get('entity_type')}>"
+            return f"<{params.get('entity_type')}_{uuid.uuid4()}>"
         return new_val
 
     def validate(self, params: Dict = None) -> None:
